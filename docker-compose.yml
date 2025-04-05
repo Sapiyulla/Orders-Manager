@@ -1,0 +1,15 @@
+services:
+  users-database:
+    image: postgres:17-alpine
+    ports:
+      - "5433:5432"
+    networks:
+      - microservice-net
+    environment:
+      POSTGRES_PASSWORD: "secret-pw"
+      POSTGRES_DB : "users"
+
+
+networks:
+  microservice-net:
+    driver: bridge
