@@ -1,0 +1,15 @@
+services:
+  # !databases and tools for they`re
+  user-database:
+    image: postgres:17-alpine
+    ports:
+      - "5455:5432"
+    networks:
+      - orders-manager-net
+    environment:
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: users
+
+networks:
+  orders-manager-net:
+    driver: bridge

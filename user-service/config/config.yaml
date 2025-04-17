@@ -1,0 +1,14 @@
+database:
+  type: postgres
+  admin: postgres # password - in env var
+  host: localhost
+  port: 5455
+  db_name: users
+
+grpc:
+  host: localhost
+  port: 50001
+
+rest:
+  host: localhost
+  port: 8001
